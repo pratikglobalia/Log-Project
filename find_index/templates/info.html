@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   </head>
+
+   <body>
+      <h1>Log Details</h1>
+
+      <table class="table" border=2>
+        <thead>
+          {% for data in log %}
+            {% for key in data.keys %}
+            <th>{{key}}</th>
+            {% endfor %}
+          {% endfor %} 
+        </thead>
+        <tbody>
+          <tr>
+            {% for data in log %}
+              {% for value in data.values %}
+              <td>{{value}}</td>
+              {% endfor %}
+            {% endfor %}
+            </tr>
+        </tbody>
+      </table>
+      
+   </body>
+</html>
+
